@@ -19,20 +19,28 @@ export function Card({ children, className = "" }: CardProps) {
 type IconFrameProps = {
   children: ReactNode;
   tone?: "primary" | "support" | "coral";
+  className?: string;
 };
 
 const toneStyles: Record<NonNullable<IconFrameProps["tone"]>, string> = {
-  primary: "bg-gradient-to-br from-brand-primary/18 to-brand-primary/5 text-brand-support",
-  support: "bg-gradient-to-br from-brand-support/18 to-brand-support/5 text-brand-support",
-  coral: "bg-gradient-to-br from-brand-coral/18 to-brand-coral/5 text-brand-coral",
+  primary:
+    "bg-gradient-to-br from-brand-primary/18 to-brand-primary/5 text-brand-support",
+  support:
+    "bg-gradient-to-br from-brand-support/18 to-brand-support/5 text-brand-support",
+  coral:
+    "bg-gradient-to-br from-brand-coral/18 to-brand-coral/5 text-brand-coral",
 };
 
 // Contenedor de ícono: cuadrado redondeado con leve degradado y anillo
 // interior, para dar profundidad sin salirse del estilo minimalista.
-export function IconFrame({ children, tone = "primary" }: IconFrameProps) {
+export function IconFrame({
+  children,
+  tone = "primary",
+  className = "",
+}: IconFrameProps) {
   return (
     <div
-      className={`flex h-12 w-12 items-center justify-center rounded-2xl ring-1 ring-inset ring-black/[0.03] transition-transform duration-300 group-hover:scale-105 ${toneStyles[tone]}`}
+      className={`flex h-12 w-12 items-center justify-center rounded-2xl ring-1 ring-inset ring-black/[0.03] transition-transform duration-300 group-hover:scale-105 ${toneStyles[tone]} ${className}`}
     >
       <span className="h-6 w-6">{children}</span>
     </div>
