@@ -166,19 +166,8 @@ export const ROLES: Role[] = [
     icon: "teacher",
   },
   {
-    id: "estudiante",
-    label: "Estudiante",
-    headline: "Tu rendimiento, siempre visible",
-    points: [
-      "Consulta tus notas y asistencia actualizadas en tiempo real.",
-      "Recibe seguimiento oportuno si necesitas apoyo académico.",
-      "Accede desde el subdominio propio de tu institución.",
-    ],
-    icon: "student",
-  },
-  {
-    id: "coordinador",
-    label: "Coordinador",
+    id: "Administrador",
+    label: "Administrador",
     headline: "Visión completa de la institución, sin perseguir reportes",
     points: [
       "Detecta automáticamente estudiantes en riesgo académico o en extraedad.",
