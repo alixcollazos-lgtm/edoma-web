@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { BenefitsGrid } from "@/components/home/BenefitsGrid";
 import { ProductShowcase } from "@/components/home/ProductShowcase";
+import { ScheduleDemo } from "@/components/home/ScheduleDemo";
 import { RolesTabs } from "@/components/home/RolesTabs";
 import { SuccessStory } from "@/components/home/SuccessStory";
 import { ComparisonTable } from "@/components/home/ComparisonTable";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <Hero />
       <BenefitsGrid />
       <ProductShowcase />
+      <ScheduleDemo />
       <RolesTabs />
       <SuccessStory />
       <ComparisonTable />

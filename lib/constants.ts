@@ -20,7 +20,28 @@ export const NAV_LINKS = [
   { href: "/soporte", label: "Soporte" },
   { href: "/contacto", label: "Contacto" },
 ];
+// ---------------------------------------------------------------------------
+// BRAND — Paleta visual
+// ---------------------------------------------------------------------------
 
+export const BRAND_COLORS = {
+  primary: "#1E88E5",
+  ink: "#0F2A3D",
+  support: "#47B3E4",
+
+  // Tonos complementarios
+  green: "#159A68",
+  purple: "#7956B8",
+  yellow: "#E6A817",
+
+  // Fondos suaves
+  blueMist: "#F3F8FC",
+  greenMist: "#F1FAF6",
+  purpleMist: "#F7F3FC",
+  warmMist: "#FFF9F0",
+
+  line: "#DCE8F0",
+};
 // ---------------------------------------------------------------------------
 // HOME — Beneficios agrupados en 3 ejes + beneficio adicional
 // ---------------------------------------------------------------------------

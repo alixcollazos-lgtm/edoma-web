@@ -10,16 +10,22 @@ export function MissionVision() {
       {/* =====================================================
           HISTORIA
       ====================================================== */}
-      <section className="relative overflow-hidden bg-brand-mist pt-6 pb-8 sm:pt-8 sm:pb-9">
+      <section className="relative overflow-hidden bg-[#F3F8FC] pt-6 pb-8 sm:pt-8 sm:pb-9">
+
+        {/* Decoraciones suaves */}
+        <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-[#1E88E5]/5 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-[#7956B8]/5 blur-3xl" />
+
         <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+          <div className="relative grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
 
             {/* =================================================
                 TEXTO
             ================================================== */}
             <div className="max-w-2xl">
 
-              <span className="inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#1E88E5]/15 bg-white/80 px-4 py-1.5 font-display text-sm font-medium text-[#1E88E5] shadow-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#1E88E5]" />
                 Nosotros
               </span>
 
@@ -37,16 +43,16 @@ export function MissionVision() {
               <div className="mt-7 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
 
                 {/* 01 */}
-                <div className="relative overflow-hidden rounded-2xl border border-brand-primary/10 bg-white px-4 py-4 shadow-[0_6px_20px_rgba(15,42,61,0.06)] transition-all duration-300 hover:-translate-y-1">
+                <div className="group relative overflow-hidden rounded-2xl border border-[#1E88E5]/15 bg-white px-4 py-4 shadow-[0_6px_20px_rgba(15,42,61,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(30,136,229,0.10)]">
 
-                  <div className="absolute left-0 top-0 h-1 w-full bg-brand-primary" />
+                  <div className="absolute left-0 top-0 h-1 w-full bg-[#1E88E5]" />
 
                   <div className="flex items-center justify-between gap-2">
-                    <span className="font-display text-2xl font-semibold text-brand-primary">
+                    <span className="font-display text-2xl font-semibold text-[#1E88E5]">
                       01
                     </span>
 
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1E88E5]/10 text-[#1E88E5]">
                       <Icons.checkCircle />
                     </span>
                   </div>
@@ -55,20 +61,20 @@ export function MissionVision() {
                     Escuchamos
                   </p>
 
-                  <div className="mt-2 h-1 w-8 rounded-full bg-brand-primary/20" />
+                  <div className="mt-2 h-1 w-8 rounded-full bg-[#1E88E5]/20" />
                 </div>
 
                 {/* 02 */}
-                <div className="relative overflow-hidden rounded-2xl border border-brand-support/10 bg-white px-4 py-4 shadow-[0_6px_20px_rgba(15,42,61,0.06)] transition-all duration-300 hover:-translate-y-1">
+                <div className="group relative overflow-hidden rounded-2xl border border-[#159A68]/15 bg-white px-4 py-4 shadow-[0_6px_20px_rgba(15,42,61,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(21,154,104,0.10)]">
 
-                  <div className="absolute left-0 top-0 h-1 w-full bg-brand-support" />
+                  <div className="absolute left-0 top-0 h-1 w-full bg-[#159A68]" />
 
                   <div className="flex items-center justify-between gap-2">
-                    <span className="font-display text-2xl font-semibold text-brand-support">
+                    <span className="font-display text-2xl font-semibold text-[#159A68]">
                       02
                     </span>
 
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-support/10 text-brand-support">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#159A68]/10 text-[#159A68]">
                       <Icons.arrowRight />
                     </span>
                   </div>
@@ -77,20 +83,20 @@ export function MissionVision() {
                     Conectamos
                   </p>
 
-                  <div className="mt-2 h-1 w-8 rounded-full bg-brand-support/20" />
+                  <div className="mt-2 h-1 w-8 rounded-full bg-[#159A68]/20" />
                 </div>
 
                 {/* 03 */}
-                <div className="relative overflow-hidden rounded-2xl border border-brand-ink/10 bg-white px-4 py-4 shadow-[0_6px_20px_rgba(15,42,61,0.06)] transition-all duration-300 hover:-translate-y-1">
+                <div className="group relative overflow-hidden rounded-2xl border border-[#7956B8]/15 bg-white px-4 py-4 shadow-[0_6px_20px_rgba(15,42,61,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(121,86,184,0.10)]">
 
-                  <div className="absolute left-0 top-0 h-1 w-full bg-brand-ink" />
+                  <div className="absolute left-0 top-0 h-1 w-full bg-[#7956B8]" />
 
                   <div className="flex items-center justify-between gap-2">
-                    <span className="font-display text-2xl font-semibold text-brand-ink">
+                    <span className="font-display text-2xl font-semibold text-[#7956B8]">
                       03
                     </span>
 
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-ink/10 text-brand-ink">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#7956B8]/10 text-[#7956B8]">
                       <Icons.arrowRight />
                     </span>
                   </div>
@@ -99,28 +105,30 @@ export function MissionVision() {
                     Transformamos
                   </p>
 
-                  <div className="mt-2 h-1 w-8 rounded-full bg-brand-ink/20" />
+                  <div className="mt-2 h-1 w-8 rounded-full bg-[#7956B8]/20" />
                 </div>
 
               </div>
             </div>
-{/* =================================================
-    ILUSTRACIÓN — TRABAJO EN EQUIPO
-================================================== */}
-<div className="flex items-center justify-center">
 
-  <div className="relative flex w-full max-w-[560px] justify-center">
+            {/* =================================================
+                ILUSTRACIÓN — TRABAJO EN EQUIPO
+            ================================================== */}
+            <div className="flex items-center justify-center">
 
-    <Image
-  src="/images/trabajo-equipo.png"
-  alt="Trabajo en equipo"
-  width={1728}
-  height={910}
-  className="relative z-10 mt-8 -mb-8 w-[120%] max-w-none translate-x-[8%] object-contain drop-shadow-sm"
-/>
-  </div>
+              <div className="relative flex w-full max-w-[560px] justify-center">
 
-</div>
+                <Image
+                  src="/images/trabajo-equipo.png"
+                  alt="Trabajo en equipo"
+                  width={1728}
+                  height={910}
+                  className="relative z-10 mt-8 -mb-8 w-[120%] max-w-none translate-x-[8%] object-contain drop-shadow-sm"
+                />
+
+              </div>
+
+            </div>
 
           </div>
         </Container>
@@ -129,12 +137,18 @@ export function MissionVision() {
       {/* =====================================================
           MISIÓN Y PROPÓSITO
       ====================================================== */}
-      <section className="py-9 sm:py-12">
+      <section className="relative overflow-hidden bg-white py-9 sm:py-12">
+
+        {/* Decoraciones */}
+        <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-[#159A68]/5 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-[#7956B8]/5 blur-3xl" />
+
         <Container>
 
-          <div className="max-w-2xl">
+          <div className="relative max-w-2xl">
 
-            <span className="inline-flex items-center rounded-full bg-brand-primary/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#159A68]/15 bg-[#F1FAF6] px-4 py-1.5 font-display text-sm font-medium text-[#159A68]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#159A68]" />
               Lo que nos mueve
             </span>
 
@@ -144,8 +158,11 @@ export function MissionVision() {
 
           </div>
 
-          <div className="mt-7 grid gap-5 sm:grid-cols-2">
+          <div className="relative mt-7 grid gap-5 sm:grid-cols-2">
 
+            {/* =================================================
+                MISIÓN
+            ================================================== */}
             <Card>
 
               <IconFrame>
@@ -162,6 +179,9 @@ export function MissionVision() {
 
             </Card>
 
+            {/* =================================================
+                PROPÓSITO
+            ================================================== */}
             <Card>
 
               <IconFrame tone="coral">
@@ -182,8 +202,6 @@ export function MissionVision() {
 
         </Container>
       </section>
-
-      
     </>
   );
 }
