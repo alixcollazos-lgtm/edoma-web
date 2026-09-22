@@ -1,6 +1,5 @@
 // lib/seo.ts
-// Helper para generar metadata consistente (title, description, Open Graph)
-// en cada página. El contenido visible/SEO está en español.
+// Genera la metadata común de las páginas.
 
 import type { Metadata } from "next";
 import { SITE } from "./constants";
@@ -11,19 +10,25 @@ type PageSeo = {
   path: string;
 };
 
-export function buildMetadata({ title, description, path }: PageSeo): Metadata {
+export function buildMetadata({
+  title,
+  description,
+  path,
+}: PageSeo): Metadata {
   const url = `${SITE.url}${path}`;
-  // El layout raíz define title.template ("%s | Edoma") para toda ruta que
-  // no sea la raíz, así que el campo `title` de cada página solo lleva su
-  // propio texto (el template agrega el sufijo automáticamente).
-  // Open Graph / Twitter no usan ese template, así que ahí sí se construye
-  // el título completo a mano.
+
+  // El layout agrega "| Edoma" al título de las páginas mediante
+  // title.template. Open Graph y Twitter necesitan el título completo.
   const socialTitle = path === "/" ? title : `${title} | ${SITE.name}`;
 
   return {
     title,
     description,
-    alternates: { canonical: url },
+
+    alternates: {
+      canonical: url,
+    },
+
     openGraph: {
       title: socialTitle,
       description,
@@ -40,6 +45,7 @@ export function buildMetadata({ title, description, path }: PageSeo): Metadata {
         },
       ],
     },
+
     twitter: {
       card: "summary_large_image",
       title: socialTitle,

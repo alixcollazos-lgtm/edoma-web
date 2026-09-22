@@ -7,7 +7,7 @@ import { getWhatsappLink } from "@/lib/constants";
 export function CtaSection() {
   return (
 <section className="relative overflow-hidden bg-white py-12">      {/* =====================================================
-          DECORACIONES
+          Decoraciones
       ====================================================== */}
       <div className="pointer-events-none absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-[#159A68]/5 blur-3xl" />
 
@@ -26,7 +26,7 @@ export function CtaSection() {
           <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
 
             {/* =====================================================
-                TEXTO
+                Texto
             ====================================================== */}
             <div className="max-w-xl">
               <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
@@ -43,7 +43,7 @@ export function CtaSection() {
             </div>
 
             {/* =====================================================
-                BOTONES
+                Botones
             ====================================================== */}
             <div className="relative flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
 
@@ -74,7 +74,7 @@ export function CtaSection() {
           </div>
 
           {/* =====================================================
-              DETALLE INFERIOR
+              Detalle inferior
           ====================================================== */}
           <div className="relative mt-7 flex items-center gap-2 border-t border-brand-line/70 pt-4 text-xs text-brand-ink/45">
             <span className="h-1.5 w-1.5 rounded-full bg-[#159A68]" />

@@ -66,7 +66,7 @@ export function RolesTabs() {
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.55fr_1fr]">
 
           {/* =====================================================
-              SELECTOR DE ROLES
+              Selecciona los roles
           ====================================================== */}
           <div className="grid grid-cols-3 gap-2.5 lg:flex lg:flex-col">
             {ROLES.map((role, index) => {
@@ -117,7 +117,7 @@ export function RolesTabs() {
           </div>
 
           {/* =====================================================
-              INFORMACIÓN DEL ROL
+              Informacion del rol
           ====================================================== */}
           <div
             key={activeRole.id}

@@ -1,14 +1,14 @@
 // components/ui/icons.tsx
-// Cada ícono es un componente SVG propio (sin librería externa como
-// lucide-react). Se controla 100% desde aquí: color vía currentColor,
-// trazo y tamaño vía props. Registro centralizado: cualquier componente
-// del sitio importa `Icons` y renderiza `<Icons.security />`.
+// Íconos SVG propios del proyecto.
 
-import type { SVGProps } from "react";
+import type { ReactNode, SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
-const base = (children: React.ReactNode, viewBox = "0 0 24 24") =>
+const base = (
+  children: ReactNode,
+  viewBox = "0 0 24 24"
+) =>
   function Icon(props: IconProps) {
     return (
       <svg
@@ -27,10 +27,11 @@ const base = (children: React.ReactNode, viewBox = "0 0 24 24") =>
     );
   };
 
-// Algunos íconos (como el de WhatsApp) son glifos SÓLIDOS: su path está
-// diseñado para rellenarse, no para dibujarse con trazo. Si se renderizan
-// con `fill="none" stroke="currentColor"` se ve el contorno doble/deforme.
-const baseFilled = (children: React.ReactNode, viewBox = "0 0 24 24") =>
+// Algunos íconos usan relleno en lugar de trazos.
+const baseFilled = (
+  children: ReactNode,
+  viewBox = "0 0 24 24"
+) =>
   function Icon(props: IconProps) {
     return (
       <svg

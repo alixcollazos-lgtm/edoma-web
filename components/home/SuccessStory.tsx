@@ -8,7 +8,7 @@ export function SuccessStory() {
 
   return (
 <section className="relative overflow-hidden bg-white pb-16 pt-4">      {/* =====================================================
-          DECORACIONES
+          Decoraciones
       ====================================================== */}
       <div className="pointer-events-none absolute -left-32 top-16 h-72 w-72 rounded-full bg-[#159A68]/5 blur-3xl" />
 
@@ -28,7 +28,7 @@ export function SuccessStory() {
           <div className="relative grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-center lg:gap-14">
 
             {/* =====================================================
-                CONTENIDO PRINCIPAL
+                Contenido principal
             ====================================================== */}
             <div>
               <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
@@ -47,7 +47,7 @@ export function SuccessStory() {
               </div>
 
               {/* =====================================================
-                  AUTOR
+                  Autor
               ====================================================== */}
               <div className="mt-8 flex items-center gap-3">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#1E88E5]/15 bg-white font-display text-sm font-semibold text-[#1E88E5] shadow-sm">
@@ -67,7 +67,7 @@ export function SuccessStory() {
             </div>
 
             {/* =====================================================
-                TARJETA DE ESTADÍSTICA
+                Tarjeta de estadistica
             ====================================================== */}
             <div className="relative">
               <div className="relative overflow-hidden rounded-[1.5rem] border border-white/80 bg-white/80 p-6 shadow-[0_20px_40px_-28px_rgba(15,42,61,0.3)] backdrop-blur-md transition-transform duration-200 hover:-translate-y-1 sm:p-7">

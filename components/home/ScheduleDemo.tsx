@@ -95,25 +95,17 @@ export function ScheduleDemo() {
 
   const [message, setMessage] = useState("");
 
-  const selectedItem = useMemo(() => {
-    return (
-      schedule.find(
-        (item) => item.id === selectedId
-      ) ?? null
-    );
-  }, [schedule, selectedId]);
+  const selectedItem =
+    schedule.find((item) => item.id === selectedId) ?? null;
 
   const scheduleByDay = useMemo(() => {
     return DAYS.map((day) => ({
       ...day,
       items: schedule
         .filter(
-          (item) =>
-            getDayFromDate(item.date) === day.key
+          (item) => getDayFromDate(item.date) === day.key
         )
-        .sort((a, b) =>
-          a.time.localeCompare(b.time)
-        ),
+        .sort((a, b) => a.time.localeCompare(b.time)),
     }));
   }, [schedule]);
 
@@ -126,9 +118,7 @@ export function ScheduleDemo() {
     setMessage("");
 
     if (value && !getDayFromDate(value)) {
-      setMessage(
-        "Selecciona un día de lunes a viernes."
-      );
+      setMessage("Selecciona un día de lunes a viernes.");
     }
   }
 
@@ -140,9 +130,7 @@ export function ScheduleDemo() {
       !subject.trim() ||
       !course.trim()
     ) {
-      setMessage(
-        "Completa docente, asignatura y curso."
-      );
+      setMessage("Completa docente, asignatura y curso.");
       return;
     }
 
@@ -152,22 +140,16 @@ export function ScheduleDemo() {
     }
 
     if (!getDayFromDate(date)) {
-      setMessage(
-        "Selecciona un día de lunes a viernes."
-      );
+      setMessage("Selecciona un día de lunes a viernes.");
       return;
     }
 
     const alreadyExists = schedule.some(
-      (item) =>
-        item.date === date &&
-        item.time === time
+      (item) => item.date === date && item.time === time
     );
 
     if (alreadyExists) {
-      setMessage(
-        "Ya existe una clase en ese horario."
-      );
+      setMessage("Ya existe una clase en ese horario.");
       return;
     }
 
@@ -181,10 +163,7 @@ export function ScheduleDemo() {
       room: room.trim() || "Por asignar",
     };
 
-    setSchedule((current) => [
-      ...current,
-      newItem,
-    ]);
+    setSchedule((current) => [...current, newItem]);
 
     setSelectedId(newItem.id);
 
@@ -195,16 +174,12 @@ export function ScheduleDemo() {
     setTime("07:00");
     setRoom("");
 
-    setMessage(
-      "Clase agregada correctamente."
-    );
+    setMessage("Clase agregada correctamente.");
   }
 
   function handleRemoveClass(id: number) {
     setSchedule((current) =>
-      current.filter(
-        (item) => item.id !== id
-      )
+      current.filter((item) => item.id !== id)
     );
 
     if (selectedId === id) {
@@ -214,37 +189,31 @@ export function ScheduleDemo() {
 
   return (
     <section className="relative overflow-hidden bg-[#F7FAFC] py-12 sm:py-16">
-      {/* Decoración suave */}
+      {/* Decoración */}
       <div className="pointer-events-none absolute -left-24 top-20 h-64 w-64 rounded-full bg-[#1E88E5]/8 blur-3xl" />
 
       <div className="pointer-events-none absolute -right-24 bottom-20 h-64 w-64 rounded-full bg-[#7956B8]/8 blur-3xl" />
 
-<div className="relative w-full px-2 sm:px-6 lg:px-8 xl:px-10">        {/* =====================================================
-            ENCABEZADO
-        ====================================================== */}
-       <div className="w-full text-center">
-  <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
-    Muestra interactiva
-  </span>
+      <div className="relative w-full px-2 sm:px-6 lg:px-8 xl:px-10">
+        {/* Encabezado */}
+        <div className="w-full text-center">
+          <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+            Muestra interactiva
+          </span>
 
-  <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
-    Genera y organiza horarios fácilmente
-  </h2>
+          <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
+            Genera y organiza horarios fácilmente
+          </h2>
 
-  <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
-    Una demostración general de cómo podría organizarse el horario docente
-    dentro de una institución educativa.
-  </p>
-</div>
+          <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
+            Una demostración general de cómo podría organizarse el horario docente
+            dentro de una institución educativa.
+          </p>
+        </div>
 
-        {/* =====================================================
-            FORMULARIO
-        ====================================================== */}
+        {/* Formulario */}
         <div className="mt-8 rounded-2xl border border-[#DCE8F0] bg-white p-4 shadow-sm sm:p-6">
-
           <div className="flex items-center gap-3">
-
-            {/* ICONO */}
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#1E88E5] text-white shadow-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -292,17 +261,12 @@ export function ScheduleDemo() {
               </h3>
 
               <p className="text-[11px] text-slate-500 sm:text-xs">
-                Completa los datos para incorporarla al
-                horario.
+                Completa los datos para incorporarla al horario.
               </p>
             </div>
-
           </div>
 
-          {/* CAMPOS */}
           <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-
-            {/* DOCENTE */}
             <label className="block">
               <span className="mb-1 block text-[11px] font-semibold text-brand-ink">
                 Docente
@@ -319,7 +283,6 @@ export function ScheduleDemo() {
               />
             </label>
 
-            {/* ASIGNATURA */}
             <label className="block">
               <span className="mb-1 block text-[11px] font-semibold text-brand-ink">
                 Asignatura
@@ -336,7 +299,6 @@ export function ScheduleDemo() {
               />
             </label>
 
-            {/* CURSO */}
             <label className="block">
               <span className="mb-1 block text-[11px] font-semibold text-brand-ink">
                 Curso
@@ -353,7 +315,6 @@ export function ScheduleDemo() {
               />
             </label>
 
-            {/* FECHA */}
             <label className="block">
               <span className="mb-1 block text-[11px] font-semibold text-brand-ink">
                 Día
@@ -371,7 +332,6 @@ export function ScheduleDemo() {
               </span>
             </label>
 
-            {/* HORA */}
             <label className="block">
               <span className="mb-1 block text-[11px] font-semibold text-brand-ink">
                 Hora
@@ -385,17 +345,13 @@ export function ScheduleDemo() {
                 className="w-full rounded-lg border border-[#DCE8F0] bg-white px-3 py-2.5 text-xs text-brand-ink outline-none transition focus:border-[#1E88E5] focus:ring-2 focus:ring-[#1E88E5]/10"
               >
                 {TIME_SLOTS.map((slot) => (
-                  <option
-                    key={slot}
-                    value={slot}
-                  >
+                  <option key={slot} value={slot}>
                     {slot}
                   </option>
                 ))}
               </select>
             </label>
 
-            {/* AULA */}
             <label className="block">
               <span className="mb-1 block text-[11px] font-semibold text-brand-ink">
                 Aula
@@ -411,12 +367,9 @@ export function ScheduleDemo() {
                 className="w-full rounded-lg border border-[#DCE8F0] bg-white px-3 py-2.5 text-xs text-brand-ink outline-none transition focus:border-[#159A68] focus:ring-2 focus:ring-[#159A68]/10"
               />
             </label>
-
           </div>
 
-          {/* BOTÓN */}
           <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
-
             <button
               type="button"
               onClick={handleAddClass}
@@ -432,9 +385,7 @@ export function ScheduleDemo() {
             {message && (
               <p
                 className={`text-[11px] font-medium ${
-                  message.includes(
-                    "correctamente"
-                  )
+                  message.includes("correctamente")
                     ? "text-[#159A68]"
                     : "text-red-600"
                 }`}
@@ -442,66 +393,46 @@ export function ScheduleDemo() {
                 {message}
               </p>
             )}
-
           </div>
-
         </div>
 
-        {/* =====================================================
-            HORARIO SEMANAL
-        ====================================================== */}
+        {/* Horario semanal */}
         <div className="mt-6 rounded-2xl border border-[#DCE8F0] bg-white p-3 shadow-sm sm:p-5">
-
-          {/* CABECERA */}
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-
             <div>
               <h3 className="text-base font-bold text-brand-ink sm:text-lg">
                 Horario semanal
               </h3>
 
               <p className="mt-0.5 text-[11px] text-slate-500 sm:text-xs">
-                Selecciona una clase para consultar sus
-                detalles.
+                Selecciona una clase para consultar sus detalles.
               </p>
             </div>
 
             <span className="w-fit rounded-full bg-[#F1FAF6] px-2.5 py-1 text-[10px] font-semibold text-[#159A68]">
               {schedule.length} clases
             </span>
-
           </div>
 
-          {/* =====================================================
-              VISTA MÓVIL
-          ====================================================== */}
+          {/* Vista móvil */}
           <div className="mt-5 space-y-4 md:hidden">
-
             {scheduleByDay.map((day) => (
               <div key={day.key}>
-
                 <div className="mb-2 flex items-center gap-2">
-
                   <div className="h-1.5 w-1.5 rounded-full bg-[#7956B8]" />
 
                   <h4 className="text-xs font-bold text-brand-ink">
                     {day.label}
                   </h4>
-
                 </div>
 
                 {day.items.length === 0 ? (
-
                   <div className="rounded-lg border border-dashed border-[#DCE8F0] bg-[#F8FBFD] px-3 py-3 text-[10px] text-slate-400">
                     No hay clases programadas.
                   </div>
-
                 ) : (
-
                   <div className="space-y-2">
-
                     {day.items.map((item) => {
-
                       const isSelected =
                         selectedId === item.id;
 
@@ -518,11 +449,8 @@ export function ScheduleDemo() {
                               : "border-[#DCE8F0] bg-white hover:border-[#7956B8]/40"
                           }`}
                         >
-
                           <div className="flex items-start justify-between gap-2">
-
                             <div className="min-w-0">
-
                               <p
                                 className={`text-[10px] font-semibold ${
                                   isSelected
@@ -538,57 +466,40 @@ export function ScheduleDemo() {
                               </p>
 
                               <p className="mt-0.5 break-words text-[10px] text-slate-500">
-                                {item.teacher} ·{" "}
-                                {item.course}
+                                {item.teacher} · {item.course}
                               </p>
-
                             </div>
 
                             <span className="shrink-0 rounded-md bg-[#F1FAF6] px-1.5 py-1 text-[9px] font-medium text-[#159A68]">
                               {item.room}
                             </span>
-
                           </div>
 
                           {isSelected && (
                             <div className="mt-2 flex items-center justify-between border-t border-[#7956B8]/15 pt-2">
-
                               <span className="text-[9px] text-slate-500">
-                                {formatDate(
-                                  item.date
-                                )}
+                                {formatDate(item.date)}
                               </span>
 
                               <span className="text-[9px] font-semibold text-[#7956B8]">
                                 Seleccionado
                               </span>
-
                             </div>
                           )}
-
                         </button>
                       );
                     })}
-
                   </div>
                 )}
-
               </div>
             ))}
-
           </div>
 
-          {/* =====================================================
-              VISTA ESCRITORIO
-          ====================================================== */}
+          {/* Vista escritorio */}
           <div className="mt-5 hidden md:block">
-
             <div className="grid grid-cols-[58px_repeat(5,minmax(0,1fr))] overflow-hidden rounded-xl border border-[#DCE8F0]">
-
-              {/* ESQUINA */}
               <div className="border-b border-r border-[#DCE8F0] bg-[#F3F8FC] px-2 py-2" />
 
-              {/* DÍAS */}
               {DAYS.map((day, index) => (
                 <div
                   key={day.key}
@@ -604,30 +515,18 @@ export function ScheduleDemo() {
                 </div>
               ))}
 
-              {/* HORAS */}
               {TIME_SLOTS.map((slot) => (
-                <div
-                  key={slot}
-                  className="contents"
-                >
-
-                  {/* HORA */}
+                <div key={slot} className="contents">
                   <div className="flex min-h-16 items-start justify-center border-b border-r border-[#DCE8F0] bg-[#FFF9F0] px-1.5 py-2">
-
                     <span className="text-[9px] font-semibold text-[#A87400]">
                       {slot}
                     </span>
-
                   </div>
 
-                  {/* DÍAS */}
                   {DAYS.map((day) => {
-
                     const item = schedule.find(
                       (entry) =>
-                        getDayFromDate(
-                          entry.date
-                        ) === day.key &&
+                        getDayFromDate(entry.date) === day.key &&
                         entry.time === slot
                     );
 
@@ -639,14 +538,11 @@ export function ScheduleDemo() {
                         key={`${day.key}-${slot}`}
                         className="min-h-16 border-b border-r border-[#DCE8F0] p-1 last:border-r-0"
                       >
-
                         {item && (
                           <button
                             type="button"
                             onClick={() =>
-                              setSelectedId(
-                                item.id
-                              )
+                              setSelectedId(item.id)
                             }
                             className={`h-full w-full rounded-lg p-1.5 text-left transition ${
                               isSelected
@@ -654,7 +550,6 @@ export function ScheduleDemo() {
                                 : "bg-[#F1FAF6] hover:bg-[#E7F6EF]"
                             }`}
                           >
-
                             <p
                               className={`truncate text-[9px] font-bold ${
                                 isSelected
@@ -684,33 +579,22 @@ export function ScheduleDemo() {
                             >
                               {item.room}
                             </p>
-
                           </button>
                         )}
-
                       </div>
                     );
                   })}
-
                 </div>
               ))}
-
             </div>
-
           </div>
-
         </div>
 
-        {/* =====================================================
-            DETALLE DE CLASE
-        ====================================================== */}
+        {/* Detalle de clase */}
         {selectedItem && (
           <div className="mt-4 rounded-xl border border-[#7956B8]/15 bg-[#F7F3FC] p-4">
-
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-
               <div className="min-w-0">
-
                 <span className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#7956B8]">
                   Clase seleccionada
                 </span>
@@ -720,46 +604,33 @@ export function ScheduleDemo() {
                 </h4>
 
                 <p className="mt-0.5 break-words text-[10px] text-slate-600">
-                  {selectedItem.teacher} ·{" "}
-                  {selectedItem.course}
+                  {selectedItem.teacher} · {selectedItem.course}
                 </p>
 
                 <p className="mt-0.5 text-[10px] text-slate-500">
-                  {formatDate(
-                    selectedItem.date
-                  )}{" "}
-                  · {selectedItem.time} ·{" "}
-                  {selectedItem.room}
+                  {formatDate(selectedItem.date)} ·{" "}
+                  {selectedItem.time} · {selectedItem.room}
                 </p>
-
               </div>
 
               <button
                 type="button"
                 onClick={() =>
-                  handleRemoveClass(
-                    selectedItem.id
-                  )
+                  handleRemoveClass(selectedItem.id)
                 }
                 className="w-full shrink-0 rounded-lg border border-red-200 bg-white px-3 py-2 text-[10px] font-semibold text-red-600 transition hover:bg-red-50 sm:w-auto"
               >
                 Eliminar clase
               </button>
-
             </div>
-
           </div>
         )}
 
-        {/* =====================================================
-            NOTA
-        ====================================================== */}
+        {/* Nota */}
         <p className="mt-4 text-center text-[10px] leading-5 text-slate-400">
-          Datos ilustrativos para mostrar la experiencia
-          de uso. No corresponden a información real de
-          una institución.
+          Datos ilustrativos para mostrar la experiencia de uso.
+          No corresponden a información real de una institución.
         </p>
-
       </div>
     </section>
   );

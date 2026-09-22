@@ -31,8 +31,7 @@ const toneStyles: Record<NonNullable<IconFrameProps["tone"]>, string> = {
     "bg-gradient-to-br from-brand-coral/18 to-brand-coral/5 text-brand-coral",
 };
 
-// Contenedor de ícono: cuadrado redondeado con leve degradado y anillo
-// interior, para dar profundidad sin salirse del estilo minimalista.
+// Contenedor de ícono
 export function IconFrame({
   children,
   tone = "primary",

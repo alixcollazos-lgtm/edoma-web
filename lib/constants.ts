@@ -1,6 +1,4 @@
 // lib/constants.ts
-// Fuente única de contenido del sitio: textos, enlaces y datos estructurados
-// que alimentan los componentes. Todo el texto visible está en español.
 
 export const SITE = {
   name: "Edoma",
@@ -21,7 +19,7 @@ export const NAV_LINKS = [
   { href: "/contacto", label: "Contacto" },
 ];
 // ---------------------------------------------------------------------------
-// BRAND — Paleta visual
+//Paleta visual
 // ---------------------------------------------------------------------------
 
 export const BRAND_COLORS = {
@@ -43,7 +41,7 @@ export const BRAND_COLORS = {
   line: "#DCE8F0",
 };
 // ---------------------------------------------------------------------------
-// HOME — Beneficios agrupados en 3 ejes + beneficio adicional
+// Home beneficios
 // ---------------------------------------------------------------------------
 
 export type Benefit = {
@@ -163,7 +161,7 @@ export const ADDITIONAL_BENEFIT = {
 };
 
 // ---------------------------------------------------------------------------
-// HOME — Roles (presentación por tipo de usuario)
+// Home roles
 // ---------------------------------------------------------------------------
 
 export type Role = {
@@ -211,7 +209,7 @@ export const ROLES: Role[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// HOME — Tabla comparativa
+// Home tabla comparatova 
 // ---------------------------------------------------------------------------
 
 export type ComparisonValue = "yes" | "no" | "partial" | "unspecified";
@@ -242,7 +240,7 @@ export const COMPARISON_NOTE =
   "Comparación funcional elaborada con base en información pública de categorías de producto similares. Las columnas no identifican proveedores concretos.";
 
 // ---------------------------------------------------------------------------
-// HOME — Caso de éxito
+// Home este es el caso de exito
 // ---------------------------------------------------------------------------
 
 export const SUCCESS_STORY = {
@@ -254,7 +252,7 @@ export const SUCCESS_STORY = {
 };
 
 // ---------------------------------------------------------------------------
-// NOSOTROS
+// Nosotros
 // ---------------------------------------------------------------------------
 
 export const ABOUT = {
@@ -281,7 +279,7 @@ export const ABOUT = {
 };
 
 // ---------------------------------------------------------------------------
-// SOPORTE — FAQ
+// Soporte
 // ---------------------------------------------------------------------------
 
 export const FAQS = [

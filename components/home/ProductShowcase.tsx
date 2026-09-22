@@ -1,12 +1,11 @@
 // components/home/ProductShowcase.tsx
 // Representación estilizada e interactiva de un panel de rendimiento.
-// Los datos son ejemplos y no corresponden a una captura real de la plataforma.
+// Los datos son ejemplos y no corresponden a una captura real.
 
 "use client";
 
 import { useMemo, useState } from "react";
 import { Container } from "@/components/ui/Container";
-import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Icons } from "@/components/ui/icons";
 
 type StudentStatus = "Al día" | "En seguimiento" | "Requiere apoyo";
@@ -113,29 +112,28 @@ export function ProductShowcase() {
   ).length;
 
   return (
-<section className="relative overflow-hidden bg-[#F7FAFC] pb-10 pt-0">      {/* Decoración morada */}
+    <section className="relative overflow-hidden bg-[#F7FAFC] pb-10 pt-0">
+      {/* Decoración morada */}
       <div className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-[#7956B8]/8 blur-3xl" />
 
       <Container className="relative grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-        {/* =====================================================
-            INFORMACIÓN
-        ====================================================== */}
+        {/* Información */}
         <div className="min-w-0">
           <div className="max-w-3xl text-left">
-  <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
-    El producto
-  </span>
+            <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+              El producto
+            </span>
 
-  <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
-    Un panel de rendimiento que se actualiza solo
-  </h2>
+            <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
+              Un panel de rendimiento que se actualiza solo
+            </h2>
 
-  <p className="mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
-    Cada nota, cada ausencia y cada observación queda visible al instante
-    para quien la necesita, sin depender de que alguien genere un reporte
-    manualmente.
-  </p>
-</div>
+            <p className="mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
+              Cada nota, cada ausencia y cada observación queda visible al instante
+              para quien la necesita, sin depender de que alguien genere un reporte
+              manualmente.
+            </p>
+          </div>
 
           <ul className="mt-8 space-y-3.5">
             {highlights.map((item, index) => {
@@ -165,13 +163,9 @@ export function ProductShowcase() {
           </ul>
         </div>
 
-        {/* =====================================================
-            PANEL DE RENDIMIENTO
-        ====================================================== */}
+        {/* Panel de rendimiento */}
         <div className="min-w-0 rounded-[1.75rem] border border-[#DCE8F0] bg-white p-4 shadow-[0_35px_70px_-35px_rgba(15,42,61,0.35)] sm:p-6 lg:p-8">
-          {/* =================================================
-              ENCABEZADO
-          ================================================== */}
+          {/* Encabezado */}
           <div className="flex flex-col gap-3 border-b border-[#DCE8F0] pb-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
               <p className="font-display text-sm font-medium text-brand-ink">
@@ -189,9 +183,7 @@ export function ProductShowcase() {
             </span>
           </div>
 
-          {/* =================================================
-              INDICADORES
-          ================================================== */}
+          {/* Indicadores */}
           <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
             <div className="rounded-xl border border-[#1E88E5]/10 bg-[#F3F8FC] px-3 py-3">
               <p className="text-[0.68rem] text-brand-ink/50">
@@ -224,9 +216,7 @@ export function ProductShowcase() {
             </div>
           </div>
 
-          {/* =================================================
-              FILTROS
-          ================================================== */}
+          {/* Filtros */}
           <div className="mt-5 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
             {filters.map((filter) => {
               const isActive = filter === activeFilter;
@@ -257,9 +247,7 @@ export function ProductShowcase() {
             })}
           </div>
 
-          {/* =================================================
-              ESTUDIANTES
-          ================================================== */}
+          {/* Estudiantes */}
           <div
             key={activeFilter}
             className="mt-5 space-y-3 animate-[fadeIn_220ms_ease-out]"
@@ -282,9 +270,7 @@ export function ProductShowcase() {
                       className={`absolute left-0 top-0 h-full w-1 ${style.bar}`}
                     />
 
-                    {/* =================================================
-                        ESCRITORIO
-                    ================================================== */}
+                    {/* Escritorio */}
                     <div className="hidden items-center justify-between gap-4 md:flex">
                       <div className="flex min-w-0 items-center gap-3">
                         <div
@@ -317,9 +303,7 @@ export function ProductShowcase() {
                       </div>
                     </div>
 
-                    {/* =================================================
-                        MÓVIL
-                    ================================================== */}
+                    {/* Móvil */}
                     <div className="flex items-center gap-3 md:hidden">
                       <div
                         className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-sm font-medium ${style.avatar}`}
@@ -365,9 +349,7 @@ export function ProductShowcase() {
             )}
           </div>
 
-          {/* =================================================
-              SINCRONIZACIÓN
-          ================================================== */}
+          {/* Sincronización */}
           <div className="mt-5 flex items-start gap-2 text-xs leading-relaxed text-brand-ink/45">
             <span className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#1E88E5]">
               <Icons.offline />

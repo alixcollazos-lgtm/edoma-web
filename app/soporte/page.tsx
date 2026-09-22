@@ -17,14 +17,14 @@ export default function SoportePage() {
   return (
     <section className="relative overflow-hidden bg-[#F3F8FC] pb-16 pt-8 sm:pb-20 sm:pt-10">
       {/* =====================================================
-          DECORACIONES
+          Decoraciones
       ====================================================== */}
       <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-[#1E88E5]/5 blur-3xl" />
 
       <div className="pointer-events-none absolute -right-32 top-56 h-80 w-80 rounded-full bg-[#7956B8]/5 blur-3xl" />
 
 <Container className="relative w-full max-w-none px-4 sm:px-6 lg:px-8">        {/* =====================================================
-            ENCABEZADO
+            Encabezado
         ====================================================== */}
         <div className="max-w-4xl">
           <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
@@ -42,7 +42,7 @@ export default function SoportePage() {
         </div>
 
         {/* =====================================================
-            PREGUNTAS FRECUENTES
+            Preguntas frecuentes
         ====================================================== */}
         <div className="relative mt-8 rounded-[2rem] border border-brand-line/70 bg-white p-5 shadow-[0_18px_45px_-30px_rgba(15,42,61,0.22)] sm:mt-10 sm:p-7 lg:p-8">
           <div className="mb-6 flex items-center gap-3">
@@ -65,7 +65,7 @@ export default function SoportePage() {
         </div>
 
         {/* =====================================================
-            CONTACTO DE SOPORTE
+            Contacto soporte
         ====================================================== */}
         <div className="relative mt-8 overflow-hidden rounded-[2rem] border border-[#1E88E5]/10 bg-gradient-to-br from-white via-[#F3F8FC] to-[#F7F3FC] px-6 py-7 shadow-[0_20px_50px_-32px_rgba(15,42,61,0.24)] sm:mt-10 sm:px-8 sm:py-8 lg:px-10">
           {/* Línea superior */}

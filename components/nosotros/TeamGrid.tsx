@@ -36,7 +36,7 @@ export function TeamGrid() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
           {/* =====================================================
-              MISIÓN — AZUL
+              Mision
           ====================================================== */}
           <Card
             className={`group relative h-full overflow-hidden pl-8 transition-all duration-300 ease-out ${TONE_STYLES.blue.card}`}
@@ -65,7 +65,7 @@ export function TeamGrid() {
           </Card>
 
           {/* =====================================================
-              PROPÓSITO — VERDE
+              Proposito
           ====================================================== */}
           <Card
             className={`group relative h-full overflow-hidden pl-8 transition-all duration-300 ease-out ${TONE_STYLES.green.card}`}
@@ -94,7 +94,7 @@ export function TeamGrid() {
           </Card>
 
           {/* =====================================================
-              PROTECCIÓN DE DATOS — MORADO
+              Proteccion de datos
           ====================================================== */}
           <Card
             className={`group relative h-full overflow-hidden pl-8 transition-all duration-300 ease-out ${TONE_STYLES.purple.card}`}

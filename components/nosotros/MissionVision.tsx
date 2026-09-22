@@ -7,7 +7,7 @@ export function MissionVision() {
   return (
     <>
       {/* =====================================================
-          HISTORIA
+          Historia
       ====================================================== */}
       <section className="relative overflow-hidden bg-[#F3F8FC] pt-6 pb-8 sm:pt-8 sm:pb-9">
 
@@ -19,7 +19,7 @@ export function MissionVision() {
           <div className="relative grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
 
             {/* =================================================
-                TEXTO
+                Texto
             ================================================== */}
             <div className="max-w-2xl">
 
@@ -36,7 +36,7 @@ export function MissionVision() {
               </p>
 
               {/* =================================================
-                  PASOS
+                  Pasos
               ================================================== */}
               <div className="mt-7 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
 
@@ -110,7 +110,7 @@ export function MissionVision() {
             </div>
 
             {/* =================================================
-                ILUSTRACIÓN — TRABAJO EN EQUIPO
+                Trabajo en equipo
             ================================================== */}
             <div className="flex items-center justify-center">
               <div className="relative flex w-full max-w-[560px] items-center justify-center px-4 sm:px-0">

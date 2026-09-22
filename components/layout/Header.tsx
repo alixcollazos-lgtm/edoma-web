@@ -13,7 +13,9 @@ export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const menuLinks = NAV_LINKS.filter((link) => link.label !== "Contacto");
+  const menuLinks = NAV_LINKS.filter(
+    (link) => link.label !== "Contacto"
+  );
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-line/70 bg-brand-mist/90 backdrop-blur">
@@ -75,7 +77,7 @@ export function Header() {
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
           className="flex h-10 w-10 items-center justify-center rounded-full text-brand-ink transition-colors hover:bg-white/70 md:hidden"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((value) => !value)}
         >
           <span className="h-5 w-5">
             {open ? <Icons.close /> : <Icons.menu />}
@@ -94,7 +96,8 @@ export function Header() {
         <div className="overflow-hidden">
           <div className="border-t border-brand-line/70 bg-brand-mist">
             <Container className="flex justify-end py-4">
-<nav className="grid w-full grid-cols-3 gap-2">                {menuLinks.map((link) => {
+              <nav className="grid w-full grid-cols-3 gap-2">
+                {menuLinks.map((link) => {
                   const active = pathname === link.href;
 
                   return (
@@ -102,7 +105,8 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setOpen(false)}
-className={`rounded-lg px-3 py-3 text-center font-display text-[0.9rem] transition-all duration-200 ${                        active
+                      className={`rounded-lg px-3 py-3 text-center font-display text-[0.9rem] transition-all duration-200 ${
+                        active
                           ? "bg-white text-brand-support"
                           : "text-brand-ink/80 hover:bg-white"
                       }`}
@@ -112,11 +116,12 @@ className={`rounded-lg px-3 py-3 text-center font-display text-[0.9rem] transiti
                   );
                 })}
 
-                {/* Único acceso a Contacto */}
+                {/* Acceso a Contacto */}
                 <Link
                   href="/contacto"
                   onClick={() => setOpen(false)}
-className="col-span-3 mt-2 w-full rounded-full bg-brand-coral px-4 py-2.5 text-center font-display text-[0.95rem] font-medium text-white transition-colors hover:bg-[#F0642E]"                >
+                  className="col-span-3 mt-2 w-full rounded-full bg-brand-coral px-4 py-2.5 text-center font-display text-[0.95rem] font-medium text-white transition-colors hover:bg-[#F0642E]"
+                >
                   Contáctanos
                 </Link>
               </nav>

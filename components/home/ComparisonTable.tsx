@@ -31,9 +31,7 @@ function Cell({
       >
         <span
           className={`flex h-5 w-5 items-center justify-center rounded-full ${
-            highlight
-              ? "bg-[#1E88E5]/10"
-              : "bg-[#159A68]/10"
+            highlight ? "bg-[#1E88E5]/10" : "bg-[#159A68]/10"
           }`}
         >
           <span className="h-3.5 w-3.5">
@@ -94,34 +92,57 @@ const alternatives = [
   },
 ] as const;
 
+const accentColors = [
+  {
+    border: "border-[#1E88E5]/30",
+    bg: "bg-[#1E88E5]/10",
+    text: "text-[#1E88E5]",
+    icon: "bg-[#1E88E5]/10",
+  },
+  {
+    border: "border-[#159A68]/20",
+    bg: "bg-[#F1FAF6]",
+    text: "text-[#159A68]",
+    icon: "bg-[#159A68]/10",
+  },
+  {
+    border: "border-[#7956B8]/20",
+    bg: "bg-[#F7F3FC]",
+    text: "text-[#7956B8]",
+    icon: "bg-[#7956B8]/10",
+  },
+  {
+    border: "border-[#E6A817]/25",
+    bg: "bg-[#FFF9F0]",
+    text: "text-[#A87400]",
+    icon: "bg-[#E6A817]/10",
+  },
+] as const;
+
 export function ComparisonTable() {
   return (
     <section className="relative overflow-hidden bg-[#F3F8FC] py-24">
-      {/* =====================================================
-          DECORACIONES
-      ====================================================== */}
+      {/* Decoraciones */}
       <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#1E88E5]/5 blur-3xl" />
 
       <div className="pointer-events-none absolute -right-32 bottom-10 h-72 w-72 rounded-full bg-[#7956B8]/5 blur-3xl" />
 
       <Container className="relative">
-  <div className="mx-auto max-w-3xl text-center">
-    <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
-      Comparativa
-    </span>
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+            Comparativa
+          </span>
 
-    <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
-      Edoma frente a otras alternativas del mercado
-    </h2>
+          <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
+            Edoma frente a otras alternativas del mercado
+          </h2>
 
-    <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
-      Comparación por funcionalidad, sin nombrar proveedores específicos.
-    </p>
-  </div>
+          <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
+            Comparación por funcionalidad, sin nombrar proveedores específicos.
+          </p>
+        </div>
 
-        {/* =====================================================
-            DESKTOP
-        ====================================================== */}
+        {/* Desktop */}
         <div className="mt-12 hidden overflow-hidden rounded-[1.75rem] border border-brand-line/70 bg-white shadow-[0_25px_60px_-35px_rgba(15,42,61,0.22)] md:block">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[760px] border-collapse text-left">
@@ -197,40 +218,10 @@ export function ComparisonTable() {
           </div>
         </div>
 
-        {/* =====================================================
-            MOBILE
-        ====================================================== */}
+        {/* Mobile */}
         <div className="mt-8 space-y-4 md:hidden">
           {alternatives.map((alternative, alternativeIndex) => {
-            const accentColors = [
-              {
-                border: "border-[#1E88E5]/30",
-                bg: "bg-[#1E88E5]/10",
-                text: "text-[#1E88E5]",
-                icon: "bg-[#1E88E5]/10",
-              },
-              {
-                border: "border-[#159A68]/20",
-                bg: "bg-[#F1FAF6]",
-                text: "text-[#159A68]",
-                icon: "bg-[#159A68]/10",
-              },
-              {
-                border: "border-[#7956B8]/20",
-                bg: "bg-[#F7F3FC]",
-                text: "text-[#7956B8]",
-                icon: "bg-[#7956B8]/10",
-              },
-              {
-                border: "border-[#E6A817]/25",
-                bg: "bg-[#FFF9F0]",
-                text: "text-[#A87400]",
-                icon: "bg-[#E6A817]/10",
-              },
-            ];
-
-            const accent =
-              accentColors[alternativeIndex];
+            const accent = accentColors[alternativeIndex];
 
             return (
               <article
@@ -244,9 +235,7 @@ export function ComparisonTable() {
                 {/* Encabezado */}
                 <div
                   className={`relative flex items-center gap-3 px-5 py-4 ${
-                    alternative.highlight
-                      ? accent.bg
-                      : "bg-[#F8FBFD]"
+                    alternative.highlight ? accent.bg : "bg-[#F8FBFD]"
                   }`}
                 >
                   {alternative.highlight && (
@@ -300,9 +289,7 @@ export function ComparisonTable() {
                         <span className="shrink-0">
                           <Cell
                             value={value}
-                            highlight={
-                              alternative.highlight
-                            }
+                            highlight={alternative.highlight}
                           />
                         </span>
                       </div>
