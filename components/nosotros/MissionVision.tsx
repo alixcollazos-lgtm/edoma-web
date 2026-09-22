@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { Card, IconFrame } from "@/components/ui/Card";
 import { Icons } from "@/components/ui/icons";
 import { ABOUT } from "@/lib/constants";
 
@@ -24,8 +23,7 @@ export function MissionVision() {
             ================================================== */}
             <div className="max-w-2xl">
 
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#1E88E5]/15 bg-white/80 px-4 py-1.5 font-display text-sm font-medium text-[#1E88E5] shadow-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#1E88E5]" />
+              <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
                 Nosotros
               </span>
 
@@ -115,91 +113,18 @@ export function MissionVision() {
                 ILUSTRACIÓN — TRABAJO EN EQUIPO
             ================================================== */}
             <div className="flex items-center justify-center">
-
-              <div className="relative flex w-full max-w-[560px] justify-center">
-
+              <div className="relative flex w-full max-w-[560px] items-center justify-center px-4 sm:px-0">
                 <Image
                   src="/images/trabajo-equipo.png"
                   alt="Trabajo en equipo"
                   width={1728}
                   height={910}
-                  className="relative z-10 mt-8 -mb-8 w-[120%] max-w-none translate-x-[8%] object-contain drop-shadow-sm"
+                  className="relative z-10 mt-6 w-full max-w-[500px] object-contain drop-shadow-sm sm:mt-8 sm:max-w-[540px]"
                 />
-
               </div>
-
             </div>
 
           </div>
-        </Container>
-      </section>
-
-      {/* =====================================================
-          MISIÓN Y PROPÓSITO
-      ====================================================== */}
-      <section className="relative overflow-hidden bg-white py-9 sm:py-12">
-
-        {/* Decoraciones */}
-        <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-[#159A68]/5 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-[#7956B8]/5 blur-3xl" />
-
-        <Container>
-
-          <div className="relative max-w-2xl">
-
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#159A68]/15 bg-[#F1FAF6] px-4 py-1.5 font-display text-sm font-medium text-[#159A68]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#159A68]" />
-              Lo que nos mueve
-            </span>
-
-            <h2 className="mt-3 font-display text-3xl font-medium leading-tight text-brand-ink sm:text-4xl">
-              Nuestra misión y propósito
-            </h2>
-
-          </div>
-
-          <div className="relative mt-7 grid gap-5 sm:grid-cols-2">
-
-            {/* =================================================
-                MISIÓN
-            ================================================== */}
-            <Card>
-
-              <IconFrame>
-                <Icons.checkCircle />
-              </IconFrame>
-
-              <h3 className="mt-4 font-display text-xl font-medium text-brand-ink">
-                {ABOUT.mission.title}
-              </h3>
-
-              <p className="mt-2 text-[0.95rem] leading-7 text-brand-ink/65">
-                {ABOUT.mission.body}
-              </p>
-
-            </Card>
-
-            {/* =================================================
-                PROPÓSITO
-            ================================================== */}
-            <Card>
-
-              <IconFrame tone="coral">
-                <Icons.arrowRight />
-              </IconFrame>
-
-              <h3 className="mt-4 font-display text-xl font-medium text-brand-ink">
-                {ABOUT.purpose.title}
-              </h3>
-
-              <p className="mt-2 text-[0.95rem] leading-7 text-brand-ink/65">
-                {ABOUT.purpose.body}
-              </p>
-
-            </Card>
-
-          </div>
-
         </Container>
       </section>
     </>

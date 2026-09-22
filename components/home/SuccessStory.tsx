@@ -31,10 +31,9 @@ export function SuccessStory() {
                 CONTENIDO PRINCIPAL
             ====================================================== */}
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#1E88E5]/20 bg-[#1E88E5]/8 px-4 py-2 font-display text-xs font-semibold uppercase tracking-[0.08em] text-[#1E88E5]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#1E88E5]" />
-                Caso de éxito
-              </span>
+              <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+  Caso de éxito
+</span>
 
               <div className="relative mt-7">
                 {/* Comilla decorativa */}

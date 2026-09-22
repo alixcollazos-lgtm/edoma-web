@@ -29,11 +29,9 @@ export function CtaSection() {
                 TEXTO
             ====================================================== */}
             <div className="max-w-xl">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#1E88E5]/15 bg-white/80 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-[#1E88E5] shadow-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#1E88E5]" />
-                Conoce Edoma
-              </span>
-
+              <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+  Conoce Edoma
+</span>
               <h2 className="mt-4 font-display text-2xl font-medium leading-tight text-brand-ink sm:text-3xl">
                 Lleva a tu institución a un seguimiento académico real
               </h2>

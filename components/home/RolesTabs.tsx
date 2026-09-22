@@ -53,10 +53,15 @@ export function RolesTabs() {
       <div className="pointer-events-none absolute -right-28 bottom-10 h-64 w-64 rounded-full bg-[#7956B8]/6 blur-3xl" />
 
       <Container className="relative">
-        <SectionTitle
-          eyebrow="Pensado para cada rol"
-          title="Una misma plataforma, útil para todos los que hacen parte del colegio"
-        />
+        <div className="max-w-3xl text-left">
+  <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+    Pensado para cada rol
+  </span>
+
+  <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
+    Una misma plataforma, útil para todos los que hacen parte del colegio
+  </h2>
+</div>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.55fr_1fr]">
 

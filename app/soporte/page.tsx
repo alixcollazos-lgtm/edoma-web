@@ -23,15 +23,13 @@ export default function SoportePage() {
 
       <div className="pointer-events-none absolute -right-32 top-56 h-80 w-80 rounded-full bg-[#7956B8]/5 blur-3xl" />
 
-      <Container className="relative w-full max-w-none px-8 sm:px-12 lg:px-16 xl:px-20">
-        {/* =====================================================
+<Container className="relative w-full max-w-none px-4 sm:px-6 lg:px-8">        {/* =====================================================
             ENCABEZADO
         ====================================================== */}
         <div className="max-w-4xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#1E88E5]/15 bg-white/80 px-4 py-1.5 font-display text-sm font-medium text-[#1E88E5] shadow-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#1E88E5]" />
-            Soporte
-          </span>
+          <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+  Soporte
+</span>
 
           <h1 className="mt-4 font-display text-4xl font-medium leading-tight text-brand-ink sm:text-5xl">
             Preguntas frecuentes
@@ -81,8 +79,7 @@ export default function SoportePage() {
           <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             {/* Texto */}
             <div className="max-w-2xl">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#159A68]/15 bg-[#F1FAF6] px-3.5 py-1.5 font-display text-xs font-semibold text-[#159A68]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#159A68]" />
+<span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
                 Atención directa
               </span>
 

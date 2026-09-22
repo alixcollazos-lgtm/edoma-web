@@ -222,19 +222,18 @@ export function ScheduleDemo() {
 <div className="relative w-full px-2 sm:px-6 lg:px-8 xl:px-10">        {/* =====================================================
             ENCABEZADO
         ====================================================== */}
-        <div className="w-full text-center">
-  <span className="inline-flex items-center rounded-full border border-[#7956B8]/15 bg-[#F7F3FC] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#7956B8]">
+       <div className="w-full text-center">
+  <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
     Muestra interactiva
   </span>
 
-  <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-brand-ink sm:text-3xl lg:text-4xl">
+  <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
     Genera y organiza horarios fácilmente
   </h2>
 
-  <p className="mx-auto mt-2 max-w-4xl text-sm leading-6 text-brand-ink/60 sm:text-base">
-    Una demostración general de cómo podría
-    organizarse el horario docente dentro de una
-    institución educativa.
+  <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
+    Una demostración general de cómo podría organizarse el horario docente
+    dentro de una institución educativa.
   </p>
 </div>
 
