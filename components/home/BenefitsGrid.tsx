@@ -46,20 +46,11 @@ export function BenefitsGrid() {
   return (
     <section className="overflow-hidden py-20 sm:py-24">
       <Container>
-        <div className="max-w-3xl text-left">
-  <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
-    Por qué Edoma
-  </span>
-
-  <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
-    Todo lo que tu institución necesita, en tres frentes
-  </h2>
-
-  <p className="mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
-    Cumplimiento legal, automatización y visibilidad en tiempo real,
-    trabajando juntos para que nadie tenga que perseguir información.
-  </p>
-</div>
+        <SectionTitle
+          eyebrow="Por qué Edoma"
+          title="Todo lo que tu institución necesita, en tres frentes"
+          description="Cumplimiento legal, automatización y visibilidad en tiempo real, trabajando juntos para que nadie tenga que perseguir información."
+        />
 
         <div className="mt-14 space-y-7 sm:mt-16 sm:space-y-8">
           {BENEFIT_AXES.map((axis, index) => {

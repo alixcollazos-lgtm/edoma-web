@@ -128,19 +128,12 @@ export function ComparisonTable() {
       <div className="pointer-events-none absolute -right-32 bottom-10 h-72 w-72 rounded-full bg-[#7956B8]/5 blur-3xl" />
 
       <Container className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
-            Comparativa
-          </span>
-
-          <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
-            Edoma frente a otras alternativas del mercado
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
-            Comparación por funcionalidad, sin nombrar proveedores específicos.
-          </p>
-        </div>
+        <SectionTitle
+          align="center"
+          eyebrow="Comparativa"
+          title="Edoma frente a otras alternativas del mercado"
+          description="Comparación por funcionalidad, sin nombrar proveedores específicos."
+        />
 
         {/* Desktop */}
         <div className="mt-12 hidden overflow-hidden rounded-[1.75rem] border border-brand-line/70 bg-white shadow-[0_25px_60px_-35px_rgba(15,42,61,0.22)] md:block">

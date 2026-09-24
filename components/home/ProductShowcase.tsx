@@ -6,6 +6,7 @@
 
 import { useMemo, useState } from "react";
 import { Container } from "@/components/ui/Container";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Icons } from "@/components/ui/icons";
 
 type StudentStatus = "Al día" | "En seguimiento" | "Requiere apoyo";
@@ -119,21 +120,11 @@ export function ProductShowcase() {
       <Container className="relative grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         {/* Información */}
         <div className="min-w-0">
-          <div className="max-w-3xl text-left">
-            <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
-              El producto
-            </span>
-
-            <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
-              Un panel de rendimiento que se actualiza solo
-            </h2>
-
-            <p className="mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70">
-              Cada nota, cada ausencia y cada observación queda visible al instante
-              para quien la necesita, sin depender de que alguien genere un reporte
-              manualmente.
-            </p>
-          </div>
+          <SectionTitle
+            eyebrow="El producto"
+            title="Un panel de rendimiento que se actualiza solo"
+            description="Cada nota, cada ausencia y cada observación queda visible al instante para quien la necesita, sin depender de que alguien genere un reporte manualmente."
+          />
 
           <ul className="mt-8 space-y-3.5">
             {highlights.map((item, index) => {

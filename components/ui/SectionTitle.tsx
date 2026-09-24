@@ -1,4 +1,5 @@
 // components/ui/SectionTitle.tsx
+
 type SectionTitleProps = {
   eyebrow?: string;
   title: string;
@@ -12,23 +13,29 @@ export function SectionTitle({
   description,
   align = "left",
 }: SectionTitleProps) {
-  const alignment = align === "center" ? "text-center mx-auto" : "text-left";
+  const isCentered = align === "center";
+
+  const wrapperClass = isCentered
+    ? "mx-auto max-w-3xl text-center"
+    : "max-w-3xl text-left";
+
+  const descriptionClass = isCentered
+    ? "mx-auto mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70"
+    : "mt-4 max-w-2xl text-[1.05rem] leading-relaxed text-brand-ink/70";
 
   return (
-    <div className={`max-w-2xl ${alignment}`}>
+    <div className={wrapperClass}>
       {eyebrow && (
-        <p className="mb-3 font-display text-sm font-medium text-brand-support">
+        <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
           {eyebrow}
-        </p>
+        </span>
       )}
+
       <h2 className="font-display text-3xl font-medium leading-[1.15] text-brand-ink sm:text-4xl">
         {title}
       </h2>
-      {description && (
-        <p className="mt-4 text-[1.05rem] leading-relaxed text-brand-ink/70">
-          {description}
-        </p>
-      )}
+
+      {description && <p className={descriptionClass}>{description}</p>}
     </div>
   );
 }
