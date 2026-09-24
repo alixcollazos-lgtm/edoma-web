@@ -42,7 +42,7 @@ export default function SoportePage() {
 
       <div className="pointer-events-none absolute -right-32 top-56 h-80 w-80 rounded-full bg-[#7956B8]/5 blur-3xl" />
 
-      <Container className="relative w-full max-w-none px-4 sm:px-6 lg:px-8">
+         <Container className="relative">
         {/* =====================================================
             Encabezado
         ====================================================== */}
