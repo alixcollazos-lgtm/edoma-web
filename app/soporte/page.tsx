@@ -1,10 +1,17 @@
 // app/soporte/page.tsx
+
 import type { Metadata } from "next";
+
 import { Container } from "@/components/ui/Container";
 import { FaqAccordion } from "@/components/soporte/FaqAccordion";
 import { Icons } from "@/components/ui/icons";
-import { getWhatsappLink } from "@/lib/constants";
-import { buildMetadata } from "@/lib/seo";
+
+import {
+  FAQS,
+  getWhatsappLink,
+} from "@/lib/constants";
+
+import { buildFaqJsonLd, buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Soporte",
@@ -14,8 +21,20 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function SoportePage() {
+  const faqStructuredData = buildFaqJsonLd(FAQS);
+
   return (
     <section className="relative overflow-hidden bg-[#F3F8FC] pb-16 pt-8 sm:pb-20 sm:pt-10">
+      {/* =====================================================
+          Datos estructurados SEO - FAQPage
+      ====================================================== */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqStructuredData),
+        }}
+      />
+
       {/* =====================================================
           Decoraciones
       ====================================================== */}
@@ -23,13 +42,14 @@ export default function SoportePage() {
 
       <div className="pointer-events-none absolute -right-32 top-56 h-80 w-80 rounded-full bg-[#7956B8]/5 blur-3xl" />
 
-<Container className="relative w-full max-w-none px-4 sm:px-6 lg:px-8">        {/* =====================================================
+      <Container className="relative w-full max-w-none px-4 sm:px-6 lg:px-8">
+        {/* =====================================================
             Encabezado
         ====================================================== */}
         <div className="max-w-4xl">
           <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
-  Soporte
-</span>
+            Soporte
+          </span>
 
           <h1 className="mt-4 font-display text-4xl font-medium leading-tight text-brand-ink sm:text-5xl">
             Preguntas frecuentes
@@ -79,7 +99,7 @@ export default function SoportePage() {
           <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             {/* Texto */}
             <div className="max-w-2xl">
-<span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
+              <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
                 Atención directa
               </span>
 

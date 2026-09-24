@@ -53,3 +53,30 @@ export function buildMetadata({
     },
   };
 }
+
+// ---------------------------------------------------------------------------
+// Datos estructurados (JSON-LD)
+// ---------------------------------------------------------------------------
+
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+// Construye el JSON-LD tipo FAQPage a partir de las preguntas frecuentes.
+// Se alimenta de FAQS (lib/constants.ts), la misma fuente que usa
+// FaqAccordion, así el marcado siempre coincide con lo que ve el usuario.
+export function buildFaqJsonLd(faqs: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
