@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, useMemo, useState } from "react";
+import { Container } from "../ui/Container";
 
 type ScheduleItem = {
   id: number;
@@ -194,7 +195,7 @@ export function ScheduleDemo() {
 
       <div className="pointer-events-none absolute -right-24 bottom-20 h-64 w-64 rounded-full bg-[#7956B8]/8 blur-3xl" />
 
-         <div className="relative mx-auto w-full max-w-container px-2 sm:px-6 lg:px-8 xl:px-10">
+      <Container className="relative">
         {/* Encabezado */}
         <div className="w-full text-center">
           <span className="mb-3 inline-flex items-center rounded-full bg-brand-support/10 px-4 py-1.5 font-display text-sm font-medium text-brand-support">
@@ -631,7 +632,7 @@ export function ScheduleDemo() {
           Datos ilustrativos para mostrar la experiencia de uso.
           No corresponden a información real de una institución.
         </p>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -6,11 +6,11 @@ type ContainerProps = {
   className?: string;
 };
 
-// Ancho máximo del sitio: usa el valor `container` (1180px) definido en
-// tailwind.config.ts y centra el contenido en pantallas grandes.
-// Si quien lo usa define su propio ancho máximo (por ejemplo `max-w-none`
-// en Contacto y Soporte), se respeta y no se aplica el ancho por defecto.
-const DEFAULT_WIDTH = "mx-auto max-w-container";
+// En pantallas estándar el contenido aprovecha el ancho disponible.
+// Desde 1920px se limita y centra para evitar que se estire demasiado.
+const DEFAULT_WIDTH =
+  "min-[1920px]:mx-auto min-[1920px]:max-w-container";
+
 const HAS_CUSTOM_MAX_WIDTH = /(^|\s)(\S+:)*max-w-/;
 
 export function Container({ children, className = "" }: ContainerProps) {
@@ -18,7 +18,12 @@ export function Container({ children, className = "" }: ContainerProps) {
     ? ""
     : DEFAULT_WIDTH;
 
-  const classes = ["w-full", widthClasses, "px-6 sm:px-8 lg:px-10", className]
+  const classes = [
+    "w-full",
+    widthClasses,
+    "px-6 sm:px-8 lg:px-10",
+    className,
+  ]
     .filter(Boolean)
     .join(" ");
 
