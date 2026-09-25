@@ -14,8 +14,7 @@ export function CtaSection() {
       <div className="pointer-events-none absolute -right-32 top-0 h-80 w-80 rounded-full bg-[#7956B8]/5 blur-3xl" />
 
       <Container className="relative">
-<div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-[2rem] border border-brand-line/70 bg-gradient-to-br from-[#F3F8FC] via-white to-[#F7F3FC] px-7 py-9 shadow-[0_25px_60px_-35px_rgba(15,42,61,0.22)] sm:px-10 sm:py-11 lg:px-12">
-          {/* Línea superior */}
+         <div className="relative w-full overflow-hidden rounded-[2rem] border border-brand-line/70 bg-gradient-to-br from-[#F3F8FC] via-white to-[#F7F3FC] px-7 py-9 shadow-[0_25px_60px_-35px_rgba(15,42,61,0.22)] sm:px-10 sm:py-11 lg:px-12">
           <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-[#1E88E5] via-[#159A68] to-[#7956B8]" />
 
           {/* Decoraciones internas */}
