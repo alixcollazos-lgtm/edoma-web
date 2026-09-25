@@ -22,7 +22,7 @@ export default function ContactoPage() {
 
       <div className="pointer-events-none absolute -bottom-10 right-0 h-64 w-64 rounded-full bg-brand-support/5 blur-3xl" />
 
-      <Container className="w-full max-w-none px-8 sm:px-12 lg:px-16 xl:px-20">
+      <Container>
         <div className="grid min-h-[calc(100vh-150px)] items-center gap-10 lg:grid-cols-[1fr_0.85fr] xl:gap-16">
           
           {/* Información de contacto */}
